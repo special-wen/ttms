@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>那一年剧院票务管理系统</title>
+		 <link rel="stylesheet" href="css/buttons.css">
+	   
+	<link rel="stylesheet" href="../css/ttms_m.css">
+	<link rel="stylesheet" href="../css/bs.css" />
+    <script src="../js/ttms_m.js"></script> 
+    <script type="text/javascript" src="../js/jq.js" ></script>
+	<script type="text/javascript" src="../js/bs.js" ></script>
+	<script>
+		$(function() {
+			var source = [{
+				id: 1,
+				name: "001",
+				level: "303"
+			}, {
+				id: 2,
+				name: "002",
+				level: "303"
+			}, {
+				id: 101,
+				name: "003",
+				level: "303"
+			}, {
+				id: 102,
+				name: "004",
+				level: "303"
+			}, {
+				id: 103,
+				name: "005",
+				level: "303"
+			}, ];
+
+			function resetTabullet() {
+				$("#table").tabullet({
+					data: source,
+					action: function(mode, data) {
+						console.dir(mode);
+						if (mode === 'save') {
+							source.push(data);
+						}
+						if (mode === 'edit') {
+							for (var i = 0; i < source.length; i++) {
+								if (source[i].id == data.id) {
+									source[i] = data;
+								}
+							}
+						}
+						if (mode == 'delete') {
+							for (var i = 0; i < source.length; i++) {
+								if (source[i].id == data) {
+									source.splice(i, 1);
+									break;
+								}
+							}
+						}
+						resetTabullet();
+					}
+				});
+			}
+
+			resetTabullet();
+		});
+	</script>
+	
+	</head>
+    
+	<body>
+		<header>
+			<nav>
+				<div id="logo">那一年影城</div>
+				<div class="user">
+			<a href="#">
+			<i class="fa fa-user-circle" aria-hidden="true"></i>
+			</a>
+		   </div>
+		        <ul id="navbar">
+			     <li id="active"><a href="#">管理系统用户</a></li>
+			     <li><p>增加用户</p></li>
+			     <li><p>删除用户 </p></li>
+			     <li><p>修改用户密码</p></li>
+        </ul>
+			</nav>
+			
+		</header>
+		<br>
+		<br>
+		
+		</div>
+	 	<div class="studio">
+	 		<button id="add" class="btn btn-red btn-border-o">管理系统用户</button>
+	 		<br>
+	 		<br>
+	 		<div class="play1">
+	 			<div class="picture">
+	 				
+	 				
+	 				
+	 				<img src="../image/4.jpg" width="300px" height="300px">
+	 			</div>
+	 			<div class="introduce">
+	 				<h3>身份：管理员</h3>
+	 				<p1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 					用户名：001
+	 				</p1>
+	 				<br>
+	 				<p2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 					密码:303</p2>
+	 				<br>
+	 			</div>
+	 		</div>
+	 		<div class="play2">
+	 			<div class="picture">
+	 				
+	 				
+	 				
+	 				<img src="../image/4.jpg" width="300px" height="300px">
+	 			</div>
+	 			<div class="introduce">
+	 				<h3>身份：剧院经理</h3>
+	 				<p1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 					用户名:002
+	 				</p1>
+	 				<br>
+	 				<p2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 					密码:303</p2>
+	 				<br>
+	 			</div>
+	 		</div>
+		   <div class="play3">
+	 			<div class="picture">
+	 				
+	 				
+	 				
+	 				<img src="../image/4.jpg" width="300px" height="300px">
+	 			</div>
+	 			<div class="introduce">
+	 				<h3>身份：售票员</h3>
+	 				<p1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 					用户名:003
+	 				</p1>
+	 				<br>
+	 				<p2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 					密码:303</p2>
+	 				<br>
+	 			</div>
+	 		</div>
+	 		
+	 		<div class="movie_add">
+		<div class="add"><h3>管理系统用户</h3></div>
+		<button type="button" id="close">关闭</button>
+		<div class="container" style="width: 560px;height: 530px;">
+			<div class="row">
+				<div class="col-sm-12">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<table class="table table-hover" id="table">
+						<thead>
+						<tr data-tabullet-map="id">
+							<th width="50" data-tabullet-map="_index" data-tabullet-readonly="true">NO</th>
+							<th data-tabullet-map="name">用户名</th>
+							<th data-tabullet-map="level">密码</th>
+							<th width="50" data-tabullet-type="edit"></th>
+							<th width="50" data-tabullet-type="delete"></th>
+						</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	 		
+	 		
+      <div id = "footer_logo">
+	<p>Copyright&copy2017.05.03| 逆光软件有限公司 | 那一年影城</p>
+	</div>
+	<script>
+		var add=document.getElementById("add");
+		var movie=document.getElementsByClassName("movie_add")[0];
+		var close=document.getElementById("close");
+		add.onclick=function(){
+			movie.style.display="block";
+		}
+		close.onclick=function(){
+			movie.style.display="none";
+		}
+	</script>
+	<script src="../js/Tabullet.js"></script>
+	
+	</body>
+</html>
+

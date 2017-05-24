@@ -1,0 +1,150 @@
+<style type="榜单2/css">		
+	.film{
+		height:300px;
+		width:1200px;
+	}
+	.sort{
+		width:100px;
+		height:300px;
+		float:left
+	}
+	.photo{
+		width:300px;
+		height:300px;
+		float:left
+	}
+	.explain{
+		text-align: left;
+		width:600px;
+		height:300px;
+		float:left
+	}
+	.score{
+		width:200px;
+		height:300px;
+		float:left;
+	}
+	p{
+		font-size:14px;
+		color:rgb(128,128,128);
+	}
+	h1{
+		font-family: "黑体";	
+	}
+	p1{
+		font-size: 20px;
+	}
+	p2{
+		font-size: 18px;
+		color:rgb(128,128,128);
+	}
+	p3{
+		font-size:50px;
+		color:darkorange;
+		/*font-family:castellar;*/
+		font-family:"comic sans ms";
+		text-align: center;		
+	}
+	p4{
+		font-size: 20px;
+		font-family:"arial rounded mt bold";
+		text-align: center;
+		color:white;
+		line-height:50px;
+	}
+	p5{
+		font-size: 20px;
+		font-family:"arial rounded mt bold";
+		text-align: center;
+		color:#808080;
+		line-height:50px;
+	}
+		
+	i{
+		color:white;
+		position:absolute;
+		top:11px;
+		left:10px;
+	}
+	.icon1{
+		width:50px;
+		height:50px;
+		background:red;
+		position:absolute;
+		top:200px;
+		left:100px;
+	}
+	.icon2{
+		width:50px;
+		height:50px;
+		background:#FEAE1B;
+		position:absolute;
+		top:500px;
+		left:100px;
+	}
+	.icon3{
+		width:50px;
+		height:50px;
+		background:#FEAE1B;
+		position:absolute;
+		top:800px;
+		left:100px;
+	}
+	.icon4{
+		width:50px;
+		height:50px;
+		background:#EDEDED;
+		position:absolute;
+		top:1100px;
+		left:100px;
+	}
+	.icon5{
+		width:50px;
+		height:50px;
+		background:#EDEDED;
+		position:absolute;
+		top:1400px;
+		left:100px;
+	}
+	.icon6{
+		width:50px;
+		height:50px;
+		background:#EDEDED;
+		position:absolute;
+		top:1700px;
+		left:100px;
+	}
+	.icon7{
+		width:50px;
+		height:50px;
+		background:#EDEDED;
+		position:absolute;
+		top:2000px;
+		left:100px;
+	}
+	.icon8{
+		width:50px;
+		height:50px;
+		background:#EDEDED;
+		position:absolute;
+		top:2300px;
+		left:100px;
+	}
+	.icon9{
+		width:50px;
+		height:50px;
+		background:#EDEDED;
+		position:absolute;
+		top:2600px;
+		left:100px;
+	}
+	.icon10{
+		width:50px;
+		height:50px;
+		background:#EDEDED;
+		position:absolute;
+		top:2900px;
+		left:100px;
+	}
+	
+</style>

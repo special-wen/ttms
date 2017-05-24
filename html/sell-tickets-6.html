@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>剧目-售票</title>
+		<link rel="stylesheet" href="../css/sell-tickets-1.css"/>
+		<link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css" />
+	</head>
+	<body>
+		<header>
+		<nav>
+		<div id="logo">那一年影城</div>
+		<div class="dropdown where">
+			 <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    西安
+                    <b class="caret"></b>
+                </a>
+            </li>
+		</div>
+		<ul id="navbar">
+			<li><a href="seller-login.html">首页</a></li>
+			<li><a href="movie.html">电影</a></li>
+			<li><a href="榜单.html">榜单</a></li>
+			<li><a href="售票员销售额.html">销售额</a></li>
+        </ul>
+		<form action="">
+			<input type="text" name="search" placeholder="找影视剧，影院，影人" style="background: white ">
+			<div class="font"><a href="#"><i class="search fa fa-search-plus" aria-hidden="true"></i></a></div>
+		</form>
+		<div class="user">
+			<a href="#">
+			<i class="fa fa-user-circle" aria-hidden="true"></i>
+			<p>管理员已登陆</p></a>
+		</div>
+		</nav>
+	    </header>
+		<div id="picture">
+				<img src="../image/08.jpg" width="200px" width="300px" alt="速度与激情8"/>
+		</div>
+		<div id="produce">
+			<h1>简介</h1><br />
+			<h2>银河护卫队2&nbsp;	Guardians of the Galaxy Vol. 2</h2><br />
+			<p>&nbsp;&nbsp;类    型:动作，科幻</p><br/>
+			<p>&nbsp;&nbsp;片    长:130分钟</p><br />
+			<p>&nbsp;&nbsp;上映时间:2017年6月31日</p><br />
+			<p>&nbsp;&nbsp;主    演:	克里斯·普拉特，佐伊·索尔达娜，戴夫·巴蒂斯塔，布莱德利·库珀，范·迪塞尔，凯伦·吉兰，本尼西奥·德尔·托罗，肖恩·冈，庞·克莱门捷夫，迈克尔·鲁克</p><br />
+			<p>&nbsp;&nbsp;《银河护卫队2》这部影片是由漫威电影宇宙公司出品，导演詹姆斯·古恩执导，克里斯·帕拉特、佐伊·索尔达娜、范·迪塞尔领衔主演，将于2017年5月5日在同步上映。
+                          该影片是《银河护卫队》的续集，在《银河护卫队》中，星爵的父亲惊鸿一瞥，
+                          被称为“古老的外星人”而被人所惦记。而《银河护卫队2》将会从这位神秘的人物身上开始自己故事的讲述。
+                          影片的导演詹姆斯·古恩表示，这部电影将继续把故事主线放在星爵一家的关系之上，这次，将讲述的是星爵的父亲。
+                          他说：“这会是一个关于父亲们（fathers）的故事，所以我很期待故事的进展和最终的成品。”敬请期待吧！
+			</p>
+		</div>
+		<div id="sell-seat">
+			<style type="text/css">
+            .front{width: 300px;margin: 5px 32px 45px 32px;background-color: #f0f0f0;	color: #666;text-align: center;padding: 3px;border-radius: 5px;}
+            .booking_area {float: right;position: relative;width:200px;height: 450px;margin-right: 250px;}
+            .booking_area h3 {margin: 5px 5px 0 0;font-size: 16px;}
+            .booking_area p{line-height:26px; font-size:16px; color:#999}
+            .booking_area p span{color:#666}
+            div.seatCharts-cell {color: #182C4E;height: 25px;width: 25px;line-height: 25px;margin: 3px;float: left;text-align: center;outline: none;font-size: 13px;}
+            div.seatCharts-seat {color: #fff;cursor: pointer;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
+            div.seatCharts-row {height: 35px;}
+            div.seatCharts-seat.available {background-color: #B9DEA0;}
+            div.seatCharts-seat.focused {background-color: #76B474;border: none;}
+            div.seatCharts-seat.selected {background-color: #E6CAC4;}
+            div.seatCharts-seat.unavailable {background-color: #472B34;cursor: not-allowed;}
+            div.seatCharts-container {border-right: 1px dotted #adadad;width: 400px;padding: 20px;float: left;margin-left:150px ;}
+            div.seatCharts-legend {padding-left: 0px;position: absolute;bottom: 16px;}
+            ul.seatCharts-legendList {padding-left: 0px;}
+            .seatCharts-legendItem{float:left; width:100px;margin-top: 10px;line-height: 2;}
+            span.seatCharts-legendDescription {margin-left: 5px;line-height: 30px;}
+            .checkout-button {display: block;width:80px; height:24px; line-height:20px;margin: 10px auto;border:1px solid #999;font-size: 14px; cursor:pointer}
+            #seats_chose {max-height: 150px;overflow-y: auto;overflow-x: none;width: 200px;}
+            #seats_chose li{float:left; width:72px; height:26px; line-height:26px; border:1px solid #d3d3d3; background:#f7f7f7; margin:6px; font-size:14px; font-weight:bold; text-align:center}
+       </style>
+        <div class="container">
+            <div class="demo clearfix">
+                <!---左边座位列表----->
+                <div id="seat_area">
+                    <div class="front">屏幕</div>
+                </div>
+                <!---右边选座信息----->
+                <div class="booking_area">
+                    <p>电影：<span>银河护卫队</span></p>
+                    <p>时间：<span>06月20日 22:50</span></p>
+                    <p>座位：</p>
+                    <ul id="seats_chose"></ul>
+                    <p>票数：<span id="tickects_num">0</span></p>
+                    <p>总价：<b>￥<span id="total_price">0</span></b></p>
+                    <input type="button" class="btn" value="确定购买" onClick="javascript:alert('恭喜你，购票成功！')"/>
+                    <div id="legend"></div>
+                </div>
+            </div>
+        </div>
+<script type="text/javascript" src="../js/jq.js" ></script>
+<script type="text/javascript" src="../js/jquery-1.9.1.min.js" ></script>
+<script type="text/javascript" src="../js/jquery.seat-charts.min.js"></script>
+        <script type="text/javascript">
+            var price = 100; //电影票价
+            $(document).ready(function() {
+                var $cart = $('#seats_chose'), //座位区
+                        $tickects_num = $('#tickects_num'), //票数
+                        $total_price = $('#total_price'); //票价总额
+                var sc = $('#seat_area').seatCharts({
+                    map: [//座位结构图 a 代表座位; 下划线 "_" 代表过道
+                        'cccccccccc',
+                        'cccccccccc',
+                        '__________',
+                        'cccccccc__',
+                        'cccccccccc',
+                        'cccccccccc',
+                        'cccccccccc',
+                        'cccccccccc',
+                        'cccccccccc',
+                        'cc__cc__cc'
+                    ],
+                    naming: {//设置行列等信息
+                        top: false, //不显示顶部横坐标（行） 
+                        getLabel: function(character, row, column) { //返回座位信息 
+                            return column;
+                        }
+                    },
+                    legend: {//定义图例
+                        node: $('#legend'),
+                        items: [
+                            ['c', 'available', '可选座'],
+                            ['c', 'unavailable', '已售出']
+                        ]
+                    },
+                    click: function() {
+                        if (this.status() == 'available') { //若为可选座状态，添加座位
+                            $('<li>' + (this.settings.row + 1) + '排' + this.settings.label + '座</li>')
+                                    .attr('id', 'cart-item-' + this.settings.id)
+                                    .data('seatId', this.settings.id)
+                                    .appendTo($cart);
+                            $tickects_num.text(sc.find('selected').length + 1); //统计选票数量
+                            $total_price.text(getTotalPrice(sc) + price);//计算票价总金额
+                            return 'selected';
+                        } else if (this.status() == 'selected') { //若为选中状态
+                            $tickects_num.text(sc.find('selected').length - 1);//更新票数量
+                            $total_price.text(getTotalPrice(sc) - price);//更新票价总金额
+                            $('#cart-item-' + this.settings.id).remove();//删除已预订座位
+                            return 'available';
+                        } else if (this.status() == 'unavailable') { //若为已售出状态
+                            return 'unavailable';
+                        } else {
+                            return this.style();
+                        }
+                    }
+                });
+                //设置已售出的座位
+                sc.get(['1_3', '1_4', '4_4', '4_5', '4_6', '4_7', '4_8']).status('unavailable');
+            });
+            function getTotalPrice(sc) { //计算票价总额
+                var total = 0;
+                sc.find('selected').each(function() {
+                    total += price;
+                });
+                return total;
+            }
+        </script>
+		</div>
+		<div id = "footer_logo" style="overflow: hidden;">
+	<p>Copyright&copy2017.05.03| 逆光软件有限公司 | 那一年影城</p>
+	</div>
+	</body>
+</html>
